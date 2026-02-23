@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact • Bear Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Bear Labs</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container narrow">
+        <h1>Contact</h1>
+        <p>Drop me a text and it will be sent direct to my email.</p>
+        <form id="contactForm" class="form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Write your message"></textarea>
+          </div>
+          <button class="btn primary" type="submit">Send</button>
+          <p id="status" class="status" aria-live="polite"></p>
+        </form>
+        <div class="alt-mail">
+          <a class="btn" href="mailto:atharvamahabal8@gmail.com?subject=Hello%20from%20Bear%20Labs">Open Email App</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Bear Labs</div>
+      <div class="footer-links">
+        <a href="index.html#projects">Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('status');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('New message from Portfolio: ' + name);
+      const body = encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
+      const mailto = 'mailto:atharvamahabal8@gmail.com?subject=' + subject + '&body=' + body;
+      statusEl.textContent = 'Opening your email app...';
+      window.location.href = mailto;
+      setTimeout(function() {
+        statusEl.textContent = 'If your email app did not open, use the button above.';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
