@@ -20,14 +20,13 @@
       </nav>
     </div>
   </header>
-
   <main>
     <section class="hero">
       <div class="container hero-inner">
         <img class="avatar" src="https://api.dicebear.com/9.x/lorelei/svg?seed=Avery&radius=50&backgroundColor=b6e3f4" alt="Bitmoji Avatar">
         <div class="hero-copy">
-          <h1>Hi, I’m Atharva — Bear Labs</h1>
-          <p>I’m an enthusiast who likes to build new things while learning.</p>
+          <h1>Hi, I'm Atharva — Bear Labs</h1>
+          <p>I'm an enthusiast who likes to build new things while learning.</p>
           <div class="cta">
             <a class="btn primary" href="#projects">View Projects</a>
             <a class="btn" href="contact.html">Contact Me</a>
@@ -35,61 +34,60 @@
         </div>
       </div>
     </section>
-
     <section id="projects" class="section">
       <div class="container">
         <h2>Apps & Projects</h2>
-        <p class="section-subtitle">A selection of work I’ve built and shipped.</p>
+        <p class="section-subtitle">A selection of work I've built and shipped.</p>
         <div class="grid">
+
           <article class="card">
             <div class="card-media placeholder">APP</div>
             <div class="card-body">
-              <h3>Android App 1</h3>
-              <p>Brief summary of what it does and why it’s useful.</p>
+              <h3>QuietSpace</h3>
+              <p>An Android app designed to help you find calm — manage noise, focus, and mental space on the go.</p>
               <div class="card-actions">
-                <a class="btn small" href="#" target="_blank">View</a>
-                <a class="btn small" href="#" target="_blank">Source</a>
+                <a class="btn small" href="https://github.com/atharvamahabal/QuietSpace" target="_blank">Source</a>
               </div>
             </div>
           </article>
+
           <article class="card">
             <div class="card-media placeholder">APP</div>
             <div class="card-body">
-              <h3>Android App 2</h3>
-              <p>Brief summary of what it does and why it’s useful.</p>
+              <h3>Market Research</h3>
+              <p>An Android app for conducting and organizing market research — gather insights and track trends efficiently.</p>
               <div class="card-actions">
-                <a class="btn small" href="#" target="_blank">View</a>
-                <a class="btn small" href="#" target="_blank">Source</a>
+                <a class="btn small" href="https://github.com/atharvamahabal" target="_blank">Source</a>
               </div>
             </div>
           </article>
+
           <article class="card">
-            <div class="card-media placeholder">PROJECT</div>
+            <div class="card-media placeholder">APP</div>
             <div class="card-body">
-              <h3>Project 3</h3>
-              <p>Brief summary of what it does and why it’s useful.</p>
+              <h3>Home Automation</h3>
+              <p>An Android app to control and automate your home devices — smart, simple, and built with Flutter.</p>
               <div class="card-actions">
-                <a class="btn small" href="#" target="_blank">Demo</a>
-                <a class="btn small" href="#" target="_blank">Source</a>
+                <a class="btn small" href="https://github.com/atharvamahabal/home-automation" target="_blank">Source</a>
               </div>
             </div>
           </article>
+
           <article class="card">
-            <div class="card-media placeholder">LIB</div>
+            <div class="card-media placeholder">APP</div>
             <div class="card-body">
-              <h3>Library 4</h3>
-              <p>Brief summary of what it does and why it’s useful.</p>
+              <h3>Dream Forge</h3>
+              <p>An Android app to capture, build, and visualize your dreams and goals — forge the future you imagine.</p>
               <div class="card-actions">
-                <a class="btn small" href="#" target="_blank">Docs</a>
-                <a class="btn small" href="#" target="_blank">Source</a>
+                <a class="btn small" href="https://github.com/atharvamahabal" target="_blank">Source</a>
               </div>
             </div>
           </article>
+
         </div>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>© <span id="year"></span> Bear Labs</div>
@@ -98,10 +96,9 @@
       </div>
     </div>
   </footer>
-
   <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 </html>
